@@ -1,0 +1,114 @@
+---
+title: "Returns to Education and Experience: A Comprehensive Analysis"
+author: "Sophia Emerson"
+format: 
+  revealjs:
+    transition: slide
+    slide-number: true
+    incremental: false 
+    theme: [default, clean.scss]
+---
+
+## Introduction
+
+- Human capital investments and labor market outcomes
+- Focus on education and work experience
+- Heterogeneity across wage distribution and genders
+- Implications for policy and labor market understanding
+
+## Research Questions
+
+1. What are the current returns to education and experience?
+2. How do these returns vary across the wage distribution?
+3. To what extent do gender differences persist?
+4. How do other factors interact with these returns?
+
+## Data and Methodology
+
+- Sample of 1,647 individuals
+- Key variables: wages, education, experience, demographics
+- Methods:
+  - OLS regression
+  - Quantile regression
+  - Gender-specific analyses
+
+## Summary Statistics
+
+
+| Variable                  | Mean | StdDev | Count |
+|---------------------------|:----:|:------:|:-----:|
+| Log hourly wages          | 3.4  |  0.5   | 1434  |
+| Yrs of education          | 11.4 |  2.4   | 1647  |
+| Yrs of experience         | 13.2 |  10.0  | 1434  |
+| Yrs of job tenure         | 7.9  |  8.1   | 1434  |
+| Sex of respondent         | 0.5  |  0.5   | 1647  |
+| Labor force participation | 0.9  |  0.3   | 1647  |
+| Age in yrs                | 39.3 |  11.0  | 1647  |
+| No of children <6         | 0.3  |  0.7   | 1647  |
+| No of children 7-14       | 0.3  |  0.7   | 1647  |
+
+
+## Main Regression Results
+
+
+| Variable           |    OLS    | Qreg(25) | Qreg(50) | Qreg(75) |
+|--------------------|:---------:|:--------:|:--------:|:--------:|
+| Yrs of education   | 0.081***  | 0.078*** | 0.069*** | 0.064*** |
+|                    |  (0.007)  |  (0.005) |  (0.005) |  (0.003) |
+| Yrs of experience  | 0.038***  | 0.046*** | 0.022*** | 0.021*** |
+|                    |  (0.006)  |  (0.008) |  (0.004) |  (0.003) |
+| Experience^2^      | -0.001*** |-0.001*** |-0.001*** |-0.001*** |
+|                    |  (0.000)  |  (0.000) |  (0.000) |  (0.000) |
+| Sex of respondent  | -0.198*** |-0.272*** |-0.142*** |-0.133*** |
+|                    |  (0.031)  |  (0.035) |  (0.025) |  (0.021) |
+
+
+## Key Findings: Returns to Education and Experience
+
+- Education: 8.1% increase in wages per year
+- Experience: 3.8% increase per year, diminishing returns
+- Quantile effects:
+  - Education: Stronger impact at lower wage levels
+  - Experience: Highest returns at 25th percentile
+
+## Gender Differences
+
+
+| Variable          |    OLS    |    Men    |   Women   |
+|-------------------|:---------:|:---------:|:---------:|
+| Yrs of education  | 0.081***  | 0.057***  | 0.098***  |
+|                   |  (0.007)  |  (0.009)  |  (0.010)  |
+| Yrs of experience | 0.038***  | 0.030***  | 0.062***  |
+|                   |  (0.006)  |  (0.007)  |  (0.010)  |
+| Experience^2^     | -0.001*** | -0.001*** | -0.001*** |
+|                   |  (0.000)  |  (0.000)  |  (0.000)  |
+| Married           |   0.004   | 0.132***  | -0.155**  |
+|                   |  (0.033)  |  (0.036)  |  (0.055)  |
+
+
+## Key Findings: Gender Differences
+
+- Higher returns to education for women (9.8% vs 5.7%)
+- Higher returns to experience for women (6.2% vs 3.0%)
+- Persistent gender wage gap (-19.8%)
+- Marriage effect: 
+  - Positive for men (+13.2%)
+  - Negative for women (-15.5%)
+
+## Implications
+
+- Continued importance of education and experience
+- Need for targeted interventions at different wage levels
+- Persistent gender disparities require nuanced approaches
+- Importance of work-family policies
+
+## Conclusions
+
+- Education and experience remain crucial for wages
+- Heterogeneous effects across wage distribution
+- Complex gender dynamics in returns to human capital
+- Future research: mechanisms, occupational differences, temporal changes
+
+## Thank You
+
+Questions? Comments?

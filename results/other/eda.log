@@ -1,0 +1,99 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:/Users/Fernando/Documents/GitHub/rm-example/results/other/eda.log
+  log type:  text
+ opened on:  26 Jul 2024, 15:28:30
+
+. * Exploratory data analysis
+. 
+. * Summary statistics
+. sum lnwage educ exper tenure isco female lfp age kids6 kids714 wt mstat agesq
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+      lnwage |      1,434    3.357604    .5310458    .507681   5.259097
+        educ |      1,647    11.40134    2.374952          5       17.5
+       exper |      1,434    13.15324    9.967714          0   49.16667
+      tenure |      1,434    7.860937    8.120458          0   44.83333
+        isco |      1,434    4.014644     2.05824          1          9
+-------------+---------------------------------------------------------
+      female |      1,647    .5391621    .4986154          0          1
+         lfp |      1,647     .870674    .3356624          0          1
+         age |      1,647    39.25379    11.03187         18         62
+       kids6 |      1,647    .2847602    .6629619          0          4
+     kids714 |      1,647    .3290832    .7073803          0          4
+-------------+---------------------------------------------------------
+          wt |      1,647    1.006181      .41161   .5302977   3.181786
+       mstat |      1,647    1.790528    .6580339          1          3
+       agesq |      1,647    1662.489    894.0876        324       3844
+
+. 
+. * Cross-tabulations
+. tab female lfp, row
+
++----------------+
+| Key            |
+|----------------|
+|   frequency    |
+| row percentage |
++----------------+
+
+           |      Labor force
+    Sex of |     participation
+respondent |         0          1 |     Total
+-----------+----------------------+----------
+      Male |         8        751 |       759 
+           |      1.05      98.95 |    100.00 
+-----------+----------------------+----------
+    Female |       205        683 |       888 
+           |     23.09      76.91 |    100.00 
+-----------+----------------------+----------
+     Total |       213      1,434 |     1,647 
+           |     12.93      87.07 |    100.00 
+
+. tab mstat lfp, row
+
++----------------+
+| Key            |
+|----------------|
+|   frequency    |
+| row percentage |
++----------------+
+
+           |      Labor force
+   Marital |     participation
+    status |         0          1 |     Total
+-----------+----------------------+----------
+    Single |         7        558 |       565 
+           |      1.24      98.76 |    100.00 
+-----------+----------------------+----------
+   Married |       188        674 |       862 
+           |     21.81      78.19 |    100.00 
+-----------+----------------------+----------
+  Divorced |        18        202 |       220 
+           |      8.18      91.82 |    100.00 
+-----------+----------------------+----------
+     Total |       213      1,434 |     1,647 
+           |     12.93      87.07 |    100.00 
+
+. 
+. * Visualizations
+. histogram lnwage, normal
+(bin=31, start=.50768095, width=.15327147)
+
+. graph export "$other/log_wage_histogram.png"
+file C:/Users/Fernando/Documents/GitHub/rm-example/results/other/log_wage_histogram.png already exists
+r(602);
+
+end of do-file
+
+r(602);
+
+. do "C:\Users\Fernando\AppData\Local\Temp\STD5e84_00000i.tmp"
+
+. log close
+      name:  <unnamed>
+       log:  C:/Users/Fernando/Documents/GitHub/rm-example/results/other/eda.log
+  log type:  text
+ closed on:  26 Jul 2024, 15:29:00
+-------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,52 @@
+---
+title: "The Impact of Education and Work Experience on Wages: A Comprehensive Analysis"
+author: "Sophia Emerson"
+date: last-modified
+date-format: long
+format: 
+  pdf: 
+    number-sections: true
+    documentclass: article
+    fontsize: 11pt
+    margin-bottom: 1in
+    margin-top: 1in
+    margin-left: 1in
+    margin-right: 1in
+bibliography: references.bib
+---
+
+# Introduction
+
+The relationship between education, work experience, and wages has been a topic of extensive research in the field of labor economics. Understanding the factors that contribute to individual earnings is crucial for policymakers, employers, and individuals alike. This research proposal aims to investigate the impact of education and work experience on hourly wages, using a comprehensive dataset that includes a wide range of demographic and labor market variables.
+
+# Literature Review
+
+The human capital theory, developed by @becker1964human and @mincer1974schooling, posits that individuals invest in education and training to enhance their productive capabilities, which in turn leads to higher earnings. Numerous studies have empirically validated this theory, finding a positive relationship between education and wages [@card1999causal; @psacharopoulos1994returns; @heckman2008role].
+
+Similarly, work experience has been shown to be a significant determinant of wages. @mincer1974schooling's seminal work on the earnings function highlighted the importance of experience in shaping an individual's earnings profile. Subsequent studies have further explored the relationship between experience and wages, often finding a concave relationship, where the returns to experience diminish over time [@altonji1991effects; @topel1991specific; @dustmann2004return].
+
+While the individual effects of education and experience on wages have been well-documented, it is also important to consider the interplay between these two factors. @card1999causal, for instance, found that the returns to education are higher for individuals with more work experience, suggesting a complementarity between the two.
+
+# Data and Methodology
+
+This study will utilize the dataset from data/processed/cleaned_data.dta, which contains information on 1,647 individuals, including their log hourly wages, years of education, years of work experience, job tenure, occupation, demographic characteristics, and labor force participation.
+
+The primary empirical strategy will be to estimate the following wage equation:
+
+$$\ln(w_i) = \beta_0 + \beta_1 \text{educ}_i + \beta_2 \text{exper}_i + \beta_3 \text{exper}_i^2 + \beta_4 \text{X}_i + \epsilon_i$${#eq-main}
+
+where $\ln(w_i)$ is the log of hourly wages for individual $i$, $\text{educ}_i$ is years of education, $\text{exper}_i$ is years of work experience, $\text{exper}_i^2$ captures the potential non-linear relationship between experience and wages, $\text{X}_i$ is a vector of control variables (e.g., gender, marital status, number of children, occupation), and $\epsilon_i$ is the error term.
+
+The model in @eq-main will be estimated using ordinary least squares (OLS) regression, with robust standard errors to account for potential heteroskedasticity. Additionally, we will explore the potential heterogeneity in the returns to education and experience by estimating the model for different subgroups (e.g., by gender, occupation).
+
+# Expected Contributions
+
+This research proposal aims to make the following contributions to the literature:
+
+1. Provide a comprehensive analysis of the impact of education and work experience on hourly wages, using a rich dataset that includes a wide range of demographic and labor market variables.
+2. Investigate the potential complementarity between education and experience in determining wages, building on the work of @card1999causal.
+3. Explore the heterogeneity in the returns to education and experience across different subgroups, which can inform targeted policy interventions.
+
+The findings of this study will have important implications for policymakers, employers, and individuals, as they seek to understand the key drivers of wage determination and the potential avenues for improving labor market outcomes.
+
+# References

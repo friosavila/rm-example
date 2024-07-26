@@ -1,0 +1,17 @@
+
+lnwage          float   %9.0g                 log hourly wages
+educ            float   %9.0g                 years of education
+exper           float   %9.0g                 years of work experience
+tenure          float   %9.0g                 years of job tenure
+isco            byte    %9.0g                 occupation (ISCO)
+female          byte    %9.0g                 sex of respondent (1=female)
+lfp             byte    %9.0g                 labor force participation
+age             byte    %9.0g                 age of respondent
+agesq           int     %10.0g                age squared
+mstat           byte    %9.0g                 1=single
+		byte    %9.0g                 2=married
+ 		byte    %9.0g                 3=divorced
+kids6           byte    %9.0g                 number of childern ages 6 and younger
+kids714         byte    %9.0g                 number of children ages 7 to 14
+wt              double  %10.0g                sampling weights
+ 
