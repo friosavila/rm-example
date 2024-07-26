@@ -26,7 +26,6 @@ global other   "$results/other"
 * ssc install reghdfe
 * ssc install estout
 ssc install color_style
-
 set scheme white2
 
 display "Root directory: $root"
@@ -34,4 +33,4 @@ display "Data directories: $data, $raw, $processed, $final, $doc"
 display "Code directories: $code, $setup, $cleaning, $analysis, $visuals"
 display "Results directories: $results, $figures, $tables, $other"
 display "Reports directories: $reports, $proposal, $papers, $presentations"
-display "README file: $readme"
+ 

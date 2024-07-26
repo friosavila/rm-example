@@ -13,11 +13,11 @@ tab mstat lfp, row
 
 * Visualizations
 histogram lnwage, normal
-graph export "$other/log_wage_histogram.png"
+graph export "$other/log_wage_histogram.png", replace
 scatter lnwage educ, msize(small) 
-graph export "$other/sct_lnw_educ.png"
+graph export "$other/sct_lnw_educ.png", replace
 scatter lnwage exper, msize(small)
-graph export "$other/sct_lnw_exper.png"
+graph export "$other/sct_lnw_exper.png", replace
 
 log close
 * Main data analysis
@@ -37,17 +37,20 @@ qreg lnwage educ exper exper2 female age kids6 kids714 i.mstat   [pw=wt], q(50)
 est sto qreg50
 qreg lnwage educ exper exper2 female age kids6 kids714 i.mstat   [pw=wt], q(75)
 est sto qreg75
-
-esttab ols qreg25 qreg50 qreg75 using "$tables", md label replace
+ 
+ 
+esttab ols qreg25 qreg50 qreg75 using "$tables\reg1", md label replace nonumber ///
+  mtitle(OLS Qreg(25) Qreg(50) Qreg(75)) nobaselevels b(3) se r2 note("")
+  
 * Robustness checks
-* Interaction between education and experience
-regress lnwage educ exper educ#exper female age kids6 kids714 mstat isco [aw=wt], robust
 
 * Subgroup analysis by gender
-regress lnwage educ exper exper2 age kids6 kids714 mstat isco [aw=wt] if female == 0, robust
-regress lnwage educ exper exper2 age kids6 kids714 mstat isco [aw=wt] if female == 1, robust
+regress lnwage educ exper exper2 age kids6 kids714   i.mstat [pw=wt] if female == 0, robust
+est sto ols_men
 
-* Save the results
-estimates store model1
-estimates store model2
-estimates store model3
+regress lnwage educ exper exper2 age kids6 kids714    i.mstat [pw=wt] if female == 1, robust
+est sto ols_women
+
+esttab ols ols_men ols_women using "$tables\reg2", md label replace nonumber ///
+  mtitle(OLS Men Women) nobaselevels b(3) se r2 note("")
+ 

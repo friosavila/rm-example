@@ -75,7 +75,7 @@ These summary statistics provide a comprehensive overview of the sample characte
 
 # Data Analysis and Results
 
-Our analysis employs several regression models to examine the impact of education and work experience on wages, while controlling for various demographic and job-related factors. @mainreg presents the results from our main regression analyses, including Ordinary Least Squares (OLS) and quantile regressions at the 25th, 50th, and 75th percentiles.
+Our analysis employs several regression models to examine the impact of education and work experience on wages, while controlling for various demographic and job-related factors. @tbl-mainreg presents the results from our main regression analyses, including Ordinary Least Squares (OLS) and quantile regressions at the 25th, 50th, and 75th percentiles.
 
 ## Main Regression Results
 
