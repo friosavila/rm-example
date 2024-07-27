@@ -17,7 +17,7 @@ global doc       "$data/doc"
 global code     "code"
 
 * Set the results directories
-global results "$root/results"
+global results "results"
 global figures "$results/figures"
 global tables  "$results/tables"
 global other   "$results/other"
