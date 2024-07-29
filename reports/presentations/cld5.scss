@@ -1,0 +1,135 @@
+/*-- scss:defaults --*/
+
+// Variables
+$sand: #e4d4b8;
+$stone: #8b8680;
+$nile-blue: #4682b4;
+$mayan-green: #2ecc71;
+$fossil-brown: #8b4513;
+$hieroglyph: #ff2800;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Papyrus&display=swap');
+
+body {
+  font-family: 'Papyrus', sans-serif;
+  background-color: $sand;
+  color: $fossil-brown;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23e4d4b8" width="100" height="100"/><path d="M0 0l50 50-50 50z" fill="%23d4c4a8"/></svg>');
+  background-size: 100px 100px;
+}
+
+.reveal {
+  font-size: 24px;
+
+  .slides section {
+    border: 10px solid $stone;
+    border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="none" stroke="%238b8680" stroke-width="20" x="10" y="10" width="80" height="80"/></svg>') 20 stretch;
+    background-color: rgba($sand, 0.7);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    color: $nile-blue;
+    text-shadow: 2px 2px 4px rgba($fossil-brown, 0.3);
+  }
+
+  h1 { 
+    font-size: 2.5em;
+    border-bottom: 3px double $hieroglyph;
+    padding-bottom: 10px;
+  }
+
+  h2 { font-size: 2em; }
+
+  a {
+    color: $mayan-green;
+    text-decoration: none;
+    border-bottom: 1px dashed $mayan-green;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: darken($mayan-green, 15%);
+      border-bottom: 1px solid darken($mayan-green, 15%);
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    li {
+      &:before {
+        margin-right: 10px;
+      }
+      &:before { content: "🦖 "; }  // Dinosaur for first level
+    }
+    ul {
+      li:before { content: "🐘 "; }  // Mammoth for second level
+      ul {
+        li:before { content: "🦅 "; }  // Eagle (Aztec symbol) for third level
+      }
+    }
+  }
+
+  blockquote {
+    border-left: 3px solid $hieroglyph;
+    background-color: rgba($hieroglyph, 0.1);
+    box-shadow: 2px 2px 5px rgba($fossil-brown, 0.2);
+    font-style: italic;
+  }
+
+  pre {
+    background-color: rgba($stone, 0.3);
+    border: 1px solid $stone;
+    border-radius: 5px;
+  }
+
+  table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    th {
+      background-color: rgba($nile-blue, 0.2);
+    }
+    td, th {
+      border: 1px solid $fossil-brown;
+    }
+  }
+
+  .progress {
+    background-color: rgba($mayan-green, 0.2);
+    color: $mayan-green;
+    height: 10px;
+  }
+}
+
+// Custom classes
+.artifact {
+  background-color: rgba($nile-blue, 0.1);
+  border: 2px solid $nile-blue;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow: 0 0 10px rgba($nile-blue, 0.3);
+}
+
+.hieroglyph {
+  font-family: 'Papyrus', sans-serif;
+  color: $hieroglyph;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.timeline {
+  background-color: rgba($fossil-brown, 0.1);
+  border-left: 5px solid $fossil-brown;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.ancient-quote {
+  font-size: 1.2em;
+  color: $mayan-green;
+  font-style: italic;
+  &:before { content: "\" "; }
+  &:after { content: " \""; }
+}

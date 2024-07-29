@@ -1,0 +1,157 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto+Slab:wght@400;700&display=swap');
+
+// Colors
+$parchment: #f0e6d2;
+$ink: #2c2c2c;
+$dragon-red: #a51d0f;
+$magic-blue: #4b0082;
+$forest-green: #228b22;
+$gold: #ffd700;
+
+$body-bg: $parchment;
+$body-color: $ink;
+$link-color: $dragon-red;
+$selection-bg: rgba($gold, 0.3);
+
+// Typography
+$font-family-sans-serif: 'Roboto Slab', serif;
+$font-family-fantasy: 'MedievalSharp', cursive;
+$font-size-root: 22px;
+
+// Headings
+$presentation-heading-font: $font-family-fantasy;
+$presentation-heading-color: $dragon-red;
+
+// Code blocks
+$code-block-bg: darken($parchment, 5%);
+$code-block-border-color: $ink;
+
+/*-- scss:rules --*/
+
+.reveal .slides {
+  background-image: url('https://example.com/parchment-texture.jpg');
+  background-size: cover;
+}
+
+.reveal .slide-number {
+  font-family: $font-family-fantasy;
+  color: $ink;
+}
+
+.reveal .footer {
+  font-family: $font-family-sans-serif;
+  font-size: 0.6em;
+  color: $ink;
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  text-shadow: 2px 2px 4px rgba($gold, 0.5);
+}
+
+.reveal table {
+  border-collapse: collapse;
+  font-size: 0.8em;
+  margin: auto;
+}
+
+.reveal table th,
+.reveal table td {
+  border: 2px solid $ink;
+  padding: 0.3em 0.6em;
+}
+
+.reveal table th {
+  background-color: rgba($dragon-red, 0.2);
+  font-weight: bold;
+}
+
+.reveal pre code {
+  border: 2px solid $ink;
+  box-shadow: 3px 3px 0 rgba($ink, 0.2);
+}
+
+/*-- scss:mixins --*/
+
+@mixin scroll-border {
+  border: 3px double $ink;
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px $parchment, 0 0 0 5px $ink;
+  padding: 10px;
+}
+
+/*-- scss:rules --*/
+
+.scroll {
+  @include scroll-border;
+  background-color: rgba($parchment, 0.7);
+}
+
+.spell {
+  font-family: $font-family-fantasy;
+  font-style: italic;
+  color: $magic-blue;
+}
+
+@function calculate-font-size($row-count) {
+    $font-size: 1em + ($row-count - 9) * 0.1em;
+    @return if($font-size > 1em, 1em, $font-size);
+}
+
+.adjust-table {
+    --row-count: 9; // Default value
+    font-size: calculate-font-size(var(--row-count));
+}
+
+
+
+
+.adj_center_fig {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 80vh;
+    max-width: 90%;
+    object-fit: contain;
+    @include scroll-border;
+  }
+}
+
+// Custom list styles
+.reveal ul {
+  list-style-type: none;
+}
+
+.reveal ul li::before {
+  content: "🗡️ ";
+  color: $dragon-red;
+}
+
+.reveal ul ul li::before {
+  content: "🛡️ ";
+  color: $forest-green;
+}
+
+.reveal ul ul ul li::before {
+  content: "🧙 ";
+  color: $magic-blue;
+}
+
+// D&D specific classes
+.strength { color: $dragon-red; }
+.dexterity { color: $forest-green; }
+.constitution { color: $gold; }
+.intelligence { color: $magic-blue; }
+.wisdom { color: #8b4513; }
+.charisma { color: #ff69b4; }
+

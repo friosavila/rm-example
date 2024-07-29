@@ -1,0 +1,96 @@
+---
+title: "Econometrics and the Sorcerer's Data"
+subtitle: "A Magical Journey Through Statistics"
+author: "Professor Minerva DataWitch"
+format:
+  revealjs:
+    theme: [default, hp.scss]
+    slide-number: true
+    footer: "Hogwarts School of Econometrics and Statistics"
+---
+
+## Welcome to Magical Econometrics
+
+In this enchanting course, we shall master:
+
+- The Ordinary Least Squares Charm
+- Defense Against the Dark Arts of Heteroskedasticity
+- Transfiguration of Variables
+
+---
+
+## The OLS Charm
+
+Behold, the magical incantation:
+
+::: {.spell}
+Ordinary Leastus Squarius: Y = β₀ + β₁X + ε
+:::
+
+Where:
+- Y is our dependent variable
+- X is our independent variable
+- ε is the error term, representing magical interference
+
+---
+
+## Data from the Triwizard Tournament
+
+::: {.adjust}
+| Year | Wizard Performance | Wand Length | Dragon Ferocity |
+|------|---------------------|-------------|-----------------|
+| 1994 | 85 points           | 11 inches   | 7               |
+| 1995 | 92 points           | 13 inches   | 5               |
+| 1996 | 78 points           | 10 inches   | 8               |
+:::
+
+---
+
+## Casting the Analysis Spell
+
+```r
+model <- lm(wizard_performance ~ wand_length + dragon_ferocity, data = triwizard_data)
+summary(model)
+```
+
+---
+
+## Interpreting the Prophecy
+
+::: {.magical-box}
+For every inch increase in wand length, wizard performance increases by 3 points, assuming dragon ferocity remains constant.
+:::
+
+---
+
+## Visualizing Our Magical Findings
+
+::: {.adj_center_fig}
+![Wizard Performance vs Wand Length](path/to/magical-scatter-plot.png)
+:::
+
+---
+
+## House Points for Econometric Excellence
+
+- [Gryffindor: Bravery in facing p-values]{.gryffindor} 
+- [Ravenclaw: Wisdom in model selection]{.ravenclaw}
+- [Hufflepuff: Diligence in data cleaning]{.hufflepuff}
+- [Slytherin: Cunning in variable manipulation]{.slytherin} 
+---
+
+## Next Lessons
+
+- Potions of Probability
+- Arithmancy of Autocorrelation
+- Care of Magical Time Series
+
+---
+
+## Conclusion
+
+Remember, young wizards:
+
+> "It is our choices that show what we truly are, far more than our statistical abilities." 
+> 
+> -- Albus Dumbledore, probably

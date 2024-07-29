@@ -1,0 +1,178 @@
+ 
+// Variables
+$parchment-color: #f4e8d1;
+$ink-color: #2c1708;
+$accent-color: #8b0000;
+$gold-color: #d4af37;
+$graph-color: #4a7c59;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond&display=swap');
+
+// Global styles
+body {
+  font-family: 'Cormorant Garamond', serif;
+  color: $ink-color;
+  background-color: $parchment-color;
+  background-image: url('https://www.transparenttextures.com/patterns/parchment.png');
+}
+
+.reveal {
+  font-size: 28px;
+  
+  .slides {
+    section {
+      padding: 20px;
+    }
+  }
+  
+  // Headings
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+    color: $accent-color;
+    text-shadow: 1px 1px 2px rgba($gold-color, 0.3);
+  }
+  
+  h1 { font-size: 2.5em; border-bottom: 2px solid $gold-color; }
+  h2 { font-size: 2em; }
+  h3 { font-size: 1.5em; }
+  
+  // Links
+  a {
+    color: $accent-color;
+    text-decoration: none;
+    border-bottom: 1px dotted $accent-color;
+    
+    &:hover {
+      color: $gold-color;
+      border-bottom: 1px solid $gold-color;
+    }
+  }
+  
+  // Code blocks
+  pre {
+    background-color: darken($parchment-color, 5%);
+    border: 1px solid $ink-color;
+    border-radius: 0;
+    box-shadow: 3px 3px 0 rgba($ink-color, 0.1);
+    
+    code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.8em;
+    }
+  }
+  
+  // Lists
+  ul, ol {
+    margin-left: 1.5em;
+    
+    li {
+      margin-bottom: 0.5em;
+      list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><circle fill="%238b0000" cx="5" cy="5" r="2"/></svg>');
+    }
+  }
+  
+  // Blockquotes
+  blockquote {
+    border-left: 3px double $gold-color;
+    padding-left: 1em;
+    font-style: italic;
+    margin: 1em 0;
+  }
+  
+  // Tables
+  table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    width: 100%;
+    margin-bottom: 1em;
+    
+    th, td {
+      border: 1px solid $ink-color;
+      padding: 0.5em;
+    }
+    
+    th {
+      background-color: rgba($gold-color, 0.2);
+      font-weight: bold;
+    }
+  }
+  
+  // Images
+  img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid $ink-color;
+    box-shadow: 5px 5px 0 rgba($ink-color, 0.2);
+  }
+  
+  // Math equations
+  .math {
+    font-size: 0.9em;
+  }
+  
+  // Graphs and charts
+  .graph, .chart {
+    .axis {
+      stroke: $ink-color;
+    }
+    .line {
+      stroke: $graph-color;
+    }
+    .point {
+      fill: $accent-color;
+    }
+  }
+  
+  // Progress bar
+  .progress {
+    color: $gold-color;
+    height: 5px;
+  }
+}
+
+// Custom classes for econometrics
+.theorem {
+  background-color: rgba($gold-color, 0.1);
+  border: 1px solid $gold-color;
+  padding: 10px;
+  margin: 10px 0;
+  position: relative;
+  
+  &::before {
+    content: 'Theorem';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: $parchment-color;
+    padding: 0 5px;
+    font-family: 'Cinzel', serif;
+    color: $accent-color;
+  }
+}
+
+.definition {
+  @extend .theorem;
+  border-color: $graph-color;
+  background-color: rgba($graph-color, 0.1);
+  
+  &::before {
+    content: 'Definition';
+    color: $graph-color;
+  }
+}
+
+.econometric-model {
+  font-family: 'Courier New', monospace;
+  background-color: rgba($ink-color, 0.05);
+  padding: 10px;
+  border-left: 3px solid $accent-color;
+}
+
+.medieval-initial::first-letter {
+  font-size: 3em;
+  float: left;
+  line-height: 1;
+  padding-right: 0.1em;
+  color: $gold-color;
+}
