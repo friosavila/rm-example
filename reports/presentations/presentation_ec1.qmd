@@ -6,79 +6,10 @@ format:
     transition: slide
     slide-number: true
     incremental: false 
-    width: 1600
-    height: 900
-    theme: [default, cld2.scss]
+    width: 1280
+    height: 720
+    theme: [default, clean.scss]
 ---
-
-# The Force Awakens
-
-## Light vs Dark
-
-- [The Jedi Order]{.jedi}
-  - Guardians of peace
-  - Wielders of the Force
-- [The Sith Empire]{.sith}
-  - Seekers of power
-  - Masters of the dark side
-
-> [Do. Or do not. There is no try.]{.force-quote}
-> -- Yoda
-
-
-# The Dawn of Civilization
-
-## From Dinosaurs to Empires
-
-:::{.timeline}
-- Mesozoic Era: Age of Dinosaurs
-- Paleolithic Period: Early Human Ancestors
-- Neolithic Period: Rise of Agriculture
-:::
-
-- The mighty [T-Rex]{.hieroglyph} ruled the land
-  - Mammoths roamed the icy plains
-    - Aztec eagles soared over temples
-
-:::{.artifact}
-**The Rosetta Stone**: Key to deciphering Egyptian hieroglyphs
-:::
-
-> [The past is never dead. It's not even past.]{.ancient-quote}
-> -- William Faulkner
-
-# The Grand Adventure Begins
-
-## Chapter 1: The Call to Action
-
-:::{.quest}
-**Main Quest**: Retrieve the [Sword of Destiny]{.spell} from the Dragon's Lair
-:::
-
-- Gather your party
-- Stock up on potions
-- Prepare for [Fireball]{.spell} encounters
-
-:::{.stat-block}
-**Hero Stats**:
-- Strength: 18
-- Intelligence: 14
-- Charisma: 16
-:::
-
-> "Beware the [Ancient Red Dragon]{.boss-text} that guards the treasure!"
-
-# Welcome to My Anime-Style Presentation!
-
-:::{.speech-bubble}
-This presentation is going to be awesome!
-:::
-
-- Point 1
-- Point 2
-- [Highlighted point]{.anime-highlight}
-
-[Click me!]{.anime-button}
 
 ## Introduction
 
@@ -181,32 +112,6 @@ This presentation is going to be awesome!
 - Future research: mechanisms, occupational differences, temporal changes
 
 ## Thank You
-
-:::{.medieval-initial}
-Welcome to our journey through the realm of econometrics, where we shall uncover the mysteries of economic data.
-:::
-
+ 
 Questions? Comments?
-
-# Introduction to Econometrics
-
-:::{.medieval-initial}
-Welcome to our journey through the realm of econometrics, where we shall uncover the mysteries of economic data.
-:::
-
-## The Linear Regression Model
-
-:::{.theorem}
-In the simplest form, we express our model as:
-
-:::{.econometric-model}
-Y = β₀ + β₁X + ε
-:::
-
-Where Y is our dependent variable, X is our independent variable, and ε represents the error term.
-:::
-
-:::{.definition}
-**Ordinary Least Squares (OLS)** is a method for estimating the unknown parameters in a linear regression model.
-:::
 
